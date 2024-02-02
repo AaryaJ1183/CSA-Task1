@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Diphylleia&family=Protest+Revolution&family=Roboto+Slab:wght@500&display=swap"
+        rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        
+    <title>Quoterr.csa</title>
+</head>
+
+<body>
+
+    <div class="section">
+
+        <div class="canvas">
+
+            <h2 class="H1">Quote Generator:</h2>
+
+            <div class="quote-space" id="quote-space">
+                <i class="fa-solid fa-quote-left"></i>
+                <p id="the-quote">Loading...</p>
+                
+                <i class="fa-solid fa-quote-right"></i>
+            </div>
+
+            <div class="divider">
+
+            </div>
+
+            <div class="credits" id="credits">
+                <p class="credits~"><b>~</b></p>
+                <p id="credits-name" onclick="openGoogle()">Loading...</p>
+                
+            </div>
+
+            <div class="add" id="add">
+                
+                <i class="fa-regular fa-clipboard clipboard" onclick="copyQuote()"></i>
+                <i class="fa-solid fa-pen-to-square" onclick="showResponse()"></i>
+            </div>
+
+            <div class="copied" id="copied">
+                <i class="fa-solid fa-clipboard-check clipboard"></i>
+            </div>
+            
+
+            <div class="submit-box" id="submit-box">
+                <p></p>
+                
+                <div class="add-quote">
+                    <input class="submit-box-input sizing" type="text" placeholder="Your quote here">
+                    <input class="submit-box-name sizing" type="text" placeholder="Your name">
+                </div>
+                <button class="submit-box-save" onclick="submitResponse()">Send<i class="fa-solid fa-envelope"></i></button>
+                
+            </div>
+
+            <div class="options">
+                <form action="." method="get">
+                    <button class="F1">New<i class="fa-solid fa-circle-right"></i></i></button>
+                </form>
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- To future self: check fxn of class and of id in add n submit-box -->
+
+    <script>
+
+        const api_url = "https://api.quotable.io/random";
+        const quote = document.getElementById("the-quote");
+        const author = document.getElementById("credits-name");
+
+        async function getquote(url) {
+            const response = await fetch(url);
+            var data = await response.json();
+            console.log(data);
+
+            quote.innerHTML = data.content;
+            author.innerHTML = data.author;
+        }
+
+        getquote(api_url);
+
+        function showResponse()
+        {
+            document.getElementById('submit-box').style.display='flex';
+            document.getElementById('quote-space').style.display='none';
+            document.getElementById('credits').style.display='none';
+        }
+
+        function submitResponse()
+        {   
+            document.getElementById('submit-box').style.display='none';
+            // alert("Thank you for suggesting a quote! \nOur team will look into it.");
+            document.getElementById('quote-space').style.display='flex';
+            document.getElementById('credits').style.display='flex';
+        }
+// let notif=document.body.createElement('div');
+// notif.innerHTML='Thank you for suggesting a quote! \nOur team will look into it.';
+// document.body.appendChild
+        // function openGoogle()
+        // {
+        //     window.location.href='https://www.google.com/search?q='
+        // }
+        
+        function copyQuote()
+        {   
+            
+            var copy = document.getElementById("the-quote");
+
+            navigator.clipboard.writeText(copy.innerHTML);
+            console.log(copy);
+
+            document.getElementById('copied').style.display='flex';
+
+        }
+
+    </script>
+
+</body>
+
+</html>

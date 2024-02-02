@@ -1,0 +1,350 @@
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #A8DADC;
+    background-image: url('haikei1.svg');
+    background-size:cover;
+}
+
+.canvas
+{      
+    display:flex;
+    justify-content:center;
+    align-items: center;
+
+    flex-direction: column;
+    padding: 2rem;
+    background-color:#2A9D8F;
+    width: 50vw;
+    height:70vh;
+    border-radius: 6vh;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .65);
+    position: relative;
+}
+
+.H1
+{
+    position: absolute;
+    margin-top: 1rem;
+    top:0;
+    font-size: 3rem;
+    font-family: 'Diphylleia', serif;
+    font-weight: bold;
+}
+#the-quote
+{   
+    
+
+    font-size: 30px;
+    color:white;
+    letter-spacing: .18rem;
+    /* font-family: 'Protest Revolution', sans-serif; */
+    font-family: 'Poor Story', system-ui;
+}
+.quote-space
+{
+    position: relative;
+}
+
+.fa-quote-right
+{  
+    position: absolute;
+    right:0;
+}
+.divider
+{
+    height:.5vh;
+    width:40vw;
+    border-radius: 40%;
+    background-color: black;
+
+    position: absolute;
+    bottom:15vh;
+}
+
+.credits
+{
+    display: flex;
+    align-items: center;
+
+    font-size:25px;
+
+    position: absolute;
+    bottom:5vh;
+    left:5vw;
+}
+#credits-name
+{
+    padding-left: 10px;
+}
+
+.options
+{
+    display: flex;
+    align-items: center;
+
+    position: absolute;
+    bottom:0;
+    right:0;
+}
+
+.F1
+{   
+    background-color: #ce4d41;
+    color: white;
+
+    font-size: 1.5rem;
+    padding:.5rem;
+    padding-left: 1rem;
+    padding-right: 5px;
+    border: none;
+
+    position: relative;
+    bottom:2rem;
+    right:4rem;
+    
+    display: flex;
+    align-items: center;
+
+    border-radius: 500rem;
+    box-shadow: 0 .25rem .5rem .25rem rgba(0,0,0,.25);
+}
+.F1:hover
+{
+    background-color: #1D3557;
+}
+/* .F1:checked
+{
+    background-color: black;
+} */
+
+.fa-circle-right
+{   
+    font-size: 20px;
+    padding:0 10px 0 10px;
+    cursor: pointer;
+}
+
+.add
+{
+    position: absolute;
+    bottom:2.75rem;
+    right:15rem;
+}
+
+.submit-box
+{
+    display:none;
+
+    border: none;
+    align-items: center;
+}
+
+.submit-box-input
+{
+  height: 15vh;
+}
+.submit-box-save
+{   
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    padding:1.25rem;
+    height:2rem;
+    background-color: #A8DADC;
+    border: none;
+    border-radius: 400rem;
+}
+.submit-box-save:hover
+{
+    background-color: #1D3557;
+    color: aliceblue;
+}
+.fa-envelope
+{
+    padding-left: 10px;
+}
+.add-quote
+{
+    display: flex;
+    flex-direction: column;
+    width:20vw;
+}
+.submit-box-name
+{   
+    margin-top: 5px;
+    height:5vh;
+}
+.sizing
+{
+    padding:1rem;
+    margin-right: 1rem;
+    border-radius: 1.4rem;
+}
+
+.fa-pen-to-square
+{   
+    font-size: 20px;
+    color: #1D3557;
+}
+.fa-pen-to-square:hover
+{
+    color: white;
+}
+.copied
+{
+    display: none;
+}
+.fa-clipboard-check
+{   
+    position: absolute;
+    bottom:2.80rem;
+    right:16.5rem;
+
+    font-size:1.5rem;
+    padding-right: 2rem;
+    color: #1D3557;
+}
+.fa-clipboard
+{   
+    font-size:1.5rem;
+    padding-right: 2rem;
+    color: #1D3557;
+}
+.fa-clipboard:hover
+{
+    color: white;
+}
+
+
+/* .fa-square-caret-right
+{
+    font-size: 1.8rem;
+
+    position: relative;
+    bottom:2rem;
+    right:4rem;
+
+    background-color: #DA1B2B;
+
+    padding:8px;
+    border-top-right-radius: 500rem;
+    border-bottom-right-radius:500rem;
+    padding-right: 15px;
+  
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* body
+{
+    
+}
+.canvas
+{   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    text-align: center;
+    background-color: aquamarine;
+    width: 50vw;
+    height:60vh;
+    position: relative;
+    border-radius: 3vh;
+}
+
+#F1
+{
+    position:absolute;
+    bottom:0;
+    right:0;
+    border: none;
+    padding: 1rem;
+    font-size: 20px;
+    margin-right: 3rem;
+    margin-bottom: 2.5rem;
+    border-radius: 500vh;
+    
+}
+
+.background
+{   
+    position: absolute;
+    width: 100%;
+    height:auto;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* body
+{   display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ca2e3b;
+}
+
+.canvas
+{   
+    display: flex;
+    justify-content: center;
+
+    background-color: aquamarine;
+    width:50%;
+    height:40vh;
+    border-radius: 5vh;
+    
+}
+#A1
+{
+   margin-top: 1rem; 
+} */
